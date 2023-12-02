@@ -35,7 +35,7 @@ export const shopData = [
     header: 'Yuki Hair Pin Set of 3',
     price: '28.00',
     image: '../../public/img/shop/06.png',
-    id: '5',
+    id: '6',
   },
 ];
 

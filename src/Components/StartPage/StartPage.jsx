@@ -1,17 +1,24 @@
 import React, { useState } from "react";
 import { shopData } from "../../data/shopData";
 import "./startPageStyling.css";
+
 export const StartPage = () => {
-  const [isActive, setIsActive] = useState(false);
- const handlMouse =(id)=>{
-  const shopDataId = shopData.map((item)=>item.id)
-  if(shopDataId.includes(id === id)){
-    setIsActive(true)
+  const [activeItemId, setActiveItemId] = useState(null);
+
+  const handleMouseEnter = (id) => {
+    setActiveItemId(id);
+  };
+
+  const handleMouseLeave = () => {
+    setActiveItemId(null);
+  };
+
+  if (shopData.length === 0) {
+    return <div>Loading...</div>;
   }
- }   
- console.log(shopData);
+
   return (
-    <div className="shop-conteiner">
+    <div className="shop-container">
       <div className="shop-header">
         <h1>Shop The Latest</h1>
         <a href="#">View All</a>
@@ -19,16 +26,23 @@ export const StartPage = () => {
       <div className="startPage">
         {shopData.map((item) => (
           <div
-            onMouseEnter={() => handlMouse(item.id)}
-            onMouseLeave={() => setIsActive(false)}
             key={item.id}
             className="shopItem"
+            onMouseEnter={() => handleMouseEnter(item.id)}
+            onMouseLeave={handleMouseLeave}
           >
             <img src={item.image} alt={item.header} />
-            {isActive && (
-              <div className="hover-butto">
+            {activeItemId === item.id && (
+              <>
+              <div className="hover-button">
                 <button>Add To Cart</button>
               </div>
+              <div className="hover-icon">
+                <img src="./img/shop/icon/cart.svg" alt="" />
+                <img src="./img/shop/icon/eye.svg" alt="" />
+                <img src="./img/shop/icon/heart.svg" alt="" />
+              </div>
+              </>
             )}
             <h3>{item.header}</h3>
             <p>${item.price}</p>
