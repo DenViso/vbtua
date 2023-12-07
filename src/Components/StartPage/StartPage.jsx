@@ -1,54 +1,34 @@
 import React, { useState } from "react";
 import { shopData } from "../../data/shopData";
 import "./startPageStyling.css";
+import { Shop } from "../Shop/Shop";
+import { Link, Outlet } from "react-router-dom";
+// import { Outlet } from "react-router-dom";
 
 export const StartPage = () => {
-  const [activeItemId, setActiveItemId] = useState(null);
-
-  const handleMouseEnter = (id) => {
-    setActiveItemId(id);
-  };
-
-  const handleMouseLeave = () => {
-    setActiveItemId(null);
-  };
+  const [startPage, setStartPage] = useState(true);
+   const isStartPage = () => {
+     setStartPage(prev => !prev);
+   };
+   
+console.log(startPage);
+ 
 
   if (shopData.length === 0) {
     return <div>Loading...</div>;
   }
 
   return (
+      
     <div className="shop-container">
       <div className="shop-header">
         <h1>Shop The Latest</h1>
-        <a href="#">View All</a>
+        <Link onClick={() => isStartPage()} to="/shop">View All</Link>
       </div>
       <div className="startPage">
-        {shopData.map((item) => (
-          <div
-            key={item.id}
-            className="shopItem"
-            onMouseEnter={() => handleMouseEnter(item.id)}
-            onMouseLeave={handleMouseLeave}
-          >
-            <img src={item.image} alt={item.header} />
-            {activeItemId === item.id && (
-              <>
-              <div className="hover-button">
-                <button>Add To Cart</button>
-              </div>
-              <div className="hover-icon">
-                <img src="./img/shop/icon/cart.svg" alt="" />
-                <img src="./img/shop/icon/eye.svg" alt="" />
-                <img src="./img/shop/icon/heart.svg" alt="" />
-              </div>
-              </>
-            )}
-            <h3>{item.header}</h3>
-            <p>${item.price}</p>
-          </div>
-        ))}
+      <Shop startPage={startPage}/>
       </div>
     </div>
+      
   );
 };
