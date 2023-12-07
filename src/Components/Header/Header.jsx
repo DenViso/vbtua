@@ -1,20 +1,21 @@
 import React from "react";
 import "./headerStyling.css";
-import {Slider} from './Slider/Slider'
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
     <>
     <div className="header">
       <div className="logo-header">
-        <a href="#" className="logoLink">
+        <Link to="/"  className="logoLink">
           <img src="./img/header/logo.svg" alt="" />
-        </a>
+        </Link>
       </div>
       <div className="nav-header">
         <ul>
           <li>
-            <a href="#">Shop</a>
+          
+            <Link to="/shop">Shop</Link>
           </li>
           <li>
             <a href="#">Blog</a>
@@ -30,7 +31,7 @@ export const Header = () => {
         <img src="./img/header/icon/IogoIcon.svg" alt="" />
       </div>
     </div>
-    <Slider/>
+
     </>
   );
 };
