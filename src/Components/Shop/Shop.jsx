@@ -29,10 +29,10 @@ export const Shop = ({ startPage }) => {
             <img src={item.image} alt={item.header} />
             {activeItemId === item.id && (
               <>
-              <div className="hover-button">
+              <div className={!startPage ?"hover-buttonFull" :"hover-button"}>
                 <button>Add To Cart</button>
               </div>
-              <div className="hover-icon">
+              <div className={!startPage ?"hover-icon" :"hover-iconFull"}>
                 <img src="./img/shop/icon/cart.svg" alt="" />
                 <img src="./img/shop/icon/eye.svg" alt="" />
                 <img src="./img/shop/icon/heart.svg" alt="" />

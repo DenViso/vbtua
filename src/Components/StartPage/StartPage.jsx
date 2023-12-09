@@ -23,9 +23,9 @@ console.log(startPage);
     <div className="shop-container">
       <div className="shop-header">
         <h1>Shop The Latest</h1>
-        <Link onClick={() => isStartPage()} to="/shop">View All</Link>
+        <Link onClick={() => isStartPage(false)} to="/shop">View All</Link>
       </div>
-      <div className="startPage">
+      <div className={startPage ? "startPageFull" :"startPage"}>
       <Shop startPage={startPage}/>
       </div>
     </div>

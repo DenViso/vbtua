@@ -1,19 +1,211 @@
-.filter{
+.filter {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 1.5rem;
-  margin-top: 2rem;
+  gap: 2rem;
+  /* margin: 2rem 0rem 0rem 0rem;  */
+  width: 30%;
+  /* height: 100%;
+  padding: 1rem; */
 }
 
-.filter>h1{
+.filter > h1 {
   color: var(--light-colors-black-light, #000);
 
-/* 33px - Heading 1 */
-font-family: DM Sans;
-font-size: 33px;
-font-style: normal;
-font-weight: 500;
-line-height: 43px; /* 130.303% */
+  /* 33px - Heading 1 */
+  font-family: DM Sans;
+  font-size: 33px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 43px; /* 130.303% */
+}
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.horizontal-slider {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 2px;
+  /* gap: 1rem; */
+  background-color: rgb(10, 10, 10);
+}
+
+.example-thumb {
+  width: 2px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgb(8, 8, 8);
+  cursor: pointer;
+}
+
+.example-track.example-track-0 {
+  top: 0px;
+  height: 2px;
+  background-color: #d8d8d8;
+}
+.example-track.example-track-1 {
+  top: 0px;
+  height: 2px;
+  background: rgb(10, 10, 10);
+}
+.example-track.example-track-2 {
+  top: 0px;
+  height: 2px;
+  background: #d8d8d8;
+}
+.horizontal-Slider.example-thumb {
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  line-height: 38px;
+  /* ont-size: 20px; */
+  text-align: center;
+  background-color: aliceblue;
+  color: #000;
+  cursor: pointer;
+  border: 5px solid gray;
+  box-sizing: border-box;
+}
+.price-range {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+.price-value {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.price-value > h3 {
+  color: var(--light-colors-dark-gray-light, #707070);
+  margin-top: 1rem;
+  font-family: DM Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+}
+.input-search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 98%;
+  /* height: 100%; */
+  gap: 1rem;
+  padding: 0.5rem 0px;
+  border-bottom: 1px solid #d8d8d8;
+}
+.input-search > input {
+  width: 85%;
+  border: none;
+}
+.input-search > img {
+  width: 20px;
+  border: none;
+}
+
+.select-category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1rem;
+}
+.category {
+  width: 100%;
+  height: 53px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  border: 1px solid var(--light-colors-gray-light, #d8d8d8);
+  color: var(--light-colors-black-light, #000);
+  /* 14px - Body Medium */
+  font-family: DM Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 157.143% */
+}
+.price-button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  gap: 2rem;
+}
+.but-Sale {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.but-Sale>h3{
+  color: var(--light-colors-black-light, #000);
+
+  /* 16px - Heading 5 */
+  font-family: DM Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px; /* 168.75% */
+}
+.but-Sale > button {
+  width: 35px;
+  height: 20px;
+  background-color: #707070;
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 400;
+  position: relative;
+}
+
+.not-active {
+  position: absolute;
+  top: 3px;
+  right: 4px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #fff;
+  animation: transform1 1s 1;
+}
+.active {
+  position: absolute;
+  top: 3px;
+  right: 16px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #fff;
+  animation: transform2 1s 1;
+}
+@keyframes transform2 {
+  0% {
+    right: 4px;
+  }
+  100% {
+    right: 16px;
+  }
+}
+@keyframes transform1 {
+  0% {
+        right: 16px;
+  }
+  100% {
+    right: 4px;
+  }
 }

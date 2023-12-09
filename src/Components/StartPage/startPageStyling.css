@@ -5,8 +5,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 2rem;
-  gap: 1.5rem;
+  margin-bottom: 1rem;
+
   overflow-y: hidden;
 }
 .startPage {
@@ -15,9 +15,9 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-
+  margin-top: 4.5rem;
   gap: 2rem;
-  width: 70%;
+  width: 65%;
   height: 100%;
 }
 .startPageFull {
@@ -36,7 +36,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2rem;
+  
 }
 .shop-header > h1 {
   color: var(--light-colors-black-light, #000);
@@ -58,12 +58,12 @@
   text-transform: capitalize;
 }
 .shopItem {
-  width: 30%;
-  height: 500px;
+  width: 28%;
+  height: 390px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  margin-top: 1rem;
   border-radius: 10px;
   cursor: pointer;
   gap: 1rem;
@@ -117,7 +117,14 @@
   cursor: pointer;
   z-index: 5;
 }
+.hover-buttonFull > button {
+  display: none;
+}
 .hover-icon {
+
+ display: none; 
+}
+.hover-iconFull {
   position: absolute;
   top: 170px;
   place-self: center;
@@ -130,6 +137,7 @@
 }
 .shopItem > img:hover {
   opacity: .3;
+  overflow: hidden;
 }
 @keyframes changSize {
   0% {
