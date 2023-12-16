@@ -6,6 +6,7 @@ import { Slider } from './Components/Header/Slider/Slider';
 import { StartPage } from './Components/StartPage/StartPage';
 import { Footer } from './Components/Footer/Footer';
 import { Shop } from './Components/Shop/Shop';
+import { Blog } from './Components/Blog/Blog';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             {/* <Route index element={<StartPage />} />  */}
           </Route>
           <Route path="/shop" element={<Shop />} />
+          <Route path="/blog" element={<Blog />} />
         </Routes>
         <Footer />
 {/* <StartPage/> */}
