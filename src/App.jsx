@@ -9,6 +9,7 @@ import { Shop } from './Components/Shop/Shop';
 import { Blog } from './Components/Blog/Blog';
 
 function App() {
+  ;
   return (
     <div className="container">
 

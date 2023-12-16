@@ -1,4 +1,4 @@
-.slider-container {
+.sliders-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -6,8 +6,9 @@
     position: relative;
     margin-bottom: 2rem;
     border-radius: 20px;
+    /* margin-top: 1.5rem; */
 }
-.slider {
+.sliders {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -21,7 +22,7 @@
   overflow: hidden;
 }
 
-.active {
+.actives {
   position: absolute;
   /* top: 0px;
   left: 0px; */
