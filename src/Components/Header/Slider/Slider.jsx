@@ -23,11 +23,11 @@ export const Slider = () => {
   }, [currentSlide]); // Викликається при зміні currentSlide
 
   return (
-    <div className="slider-container">
+    <div className="sliders-container">
       {sliderData.map((item) => (
         <div
           key={item.id}
-          className={`slider ${currentSlide === item.id ? "active" : ""}`}
+          className={`sliders ${currentSlide === item.id ? "actives" : ""}`}
         >
           <img className="img-slider" src={item.image} alt={item.header} />
           <div

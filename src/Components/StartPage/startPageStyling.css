@@ -70,13 +70,50 @@
   animation: changSize 0.8s 1 forwards;
 }
 
-.shopItem > img {
+.img-cont> img {
   width: 100%;
-
+position: relative;
   border-radius: 10px;
 }
+.sale{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: fit-content;
+height: 24px;
+flex-shrink: 0;
+padding: 3px 8px;
+background-color: #a18a68;
+border-radius: 4px;
+color: var(--light-colors-white-light, #FFF);
 
-.shopItem > h3 {
+/* 12px - Body Small */
+font-family: DM Sans;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 166.667% */
+}
+.soldOut{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: fit-content;
+height: 24px;
+flex-shrink: 0;
+padding: 3px 8px;
+background-color: #a18a68;
+border-radius: 4px;color: var(--light-colors-white-light, #FFF);
+
+/* 12px - Body Small */
+font-family: DM Sans;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 166.667% */
+}
+
+.data-header {
   color: #000;
   font-family: DM Sans;
   font-size: 20px;
@@ -86,7 +123,7 @@
   letter-spacing: 0.5px;
   text-transform: capitalize;
 }
-.shopItem > p {
+.data-text {
   color: var(--light-colors-accent-light, #a18a68);
 
   
