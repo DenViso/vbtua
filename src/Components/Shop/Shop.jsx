@@ -33,11 +33,9 @@ export const Shop = ({ startPage }) => {
             className="shopItem"
             onMouseEnter={() => handleMouseEnter(item.id)}
             onMouseLeave={handleMouseLeave}
-           
           >
             <div className="img-cont">
               <Link to={`/shop/${item.id}`}>
-                {" "}
                 <img
                   src={item.image}
                   alt={item.header}

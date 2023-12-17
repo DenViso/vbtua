@@ -6,10 +6,12 @@ import { One } from "./One.jsx";
 import { Two } from "./Two.jsx";
 import { Three } from "./Three.jsx";
 import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+export const Product = () => {
+  const { id } = useParams();
 
-export const Product = ({ id }) => {
   const [slide, setSlide] = useState(1);
-  const[addToCard, setAddToCard] = useState(false);
+  const [addToCard, setAddToCard] = useState(false);
   const [prodInfo, setProdInfo] = useState(<One />);
   const [count, setCount] = useState(1);
   const newShopData = (shopData, count = 3) => {
@@ -28,33 +30,34 @@ export const Product = ({ id }) => {
       setProdInfo(<Three />), setSlide(3);
     }
   };
-  const hendleAddToCard = () =>{
+  const hendleAddToCard = () => {
     setAddToCard(true);
-   setTimeout(() => setAddToCard(false), 5000); 
-  }
+    setTimeout(() => setAddToCard(false), 5000);
+  };
   const increase = () => {
     setCount(count + 1);
     // hendleAddToCard();
-  }
+  };
   const decrease = () => {
     setCount(count - 1);
     // hendleAddToCard();
-    if(count <= 1){
+    if (count <= 1) {
       setCount(1);
     }
-  }
+  };
 
+  
   return (
     <div className="product">
-     {addToCard ? (
+      {addToCard ? (
         <div className="product-mesage">
-        <div className="product-mesage-text">
-        <span>✔</span>
-         <p>The item added to your Shopping bag.</p>
+          <div className="product-mesage-text">
+            <span>✔</span>
+            <p>The item added to your Shopping bag.</p>
+          </div>
+          <Link to="/">VIEW CART</Link>
         </div>
-         <Link to ="/">VIEW CART</Link>
-       </div>
-     ):null}
+      ) : null}
       {productItem ? (
         <div className="product-container">
           <div className="product-item" key={productItem.id}>
@@ -76,7 +79,9 @@ export const Product = ({ id }) => {
                   <h3 className="data-header">{productItem.header}</h3>
                   <p className="data-text">${productItem.price}</p>
                   <div className="content-rev">
-                    <p>★ ★ ★ ★ ★  <span></span></p>
+                    <p>
+                      ★ ★ ★ ★ ★ <span></span>
+                    </p>
                   </div>
                   <p className="data-desc">{productItem.description}</p>
                   <div className="content-add">
@@ -119,19 +124,25 @@ export const Product = ({ id }) => {
           <div className="product-info">
             <div className="product-info-header">
               <h1
-                className={slide === 1 ? "slide info-text-header" : "info-text-header"}
+                className={
+                  slide === 1 ? "slide info-text-header" : "info-text-header"
+                }
                 onClick={() => produInfo(1)}
               >
                 Description
               </h1>
               <h1
-                className={slide === 2 ? "slide info-text-header" : "info-text-header"}
+                className={
+                  slide === 2 ? "slide info-text-header" : "info-text-header"
+                }
                 onClick={() => produInfo(2)}
               >
                 Aditional information
               </h1>
               <h1
-                className={slide === 3 ? "slide info-text-header" : "info-text-header"}
+                className={
+                  slide === 3 ? "slide info-text-header" : "info-text-header"
+                }
                 onClick={() => produInfo(3)}
               >
                 Reviews(0)
@@ -145,11 +156,13 @@ export const Product = ({ id }) => {
           <div className="similar-items">
             {filteredProducts.map((item) => (
               <div key={item.id} className="shopItem">
+              
                 <div className="img-cont">
                   <img src={item.image} alt={item.header} />
                 </div>
                 <h3 className="data-header">{item.header}</h3>
                 <p className="data-text">${item.price}</p>
+               
               </div>
             ))}
           </div>
