@@ -13,7 +13,6 @@ export const Shop = ({ startPage }) => {
     const filteredProducts = shopData.filter((product) => product.id === id);
     setProducts(filteredProducts);
   };
-  console.log(products.map((product) => product.id));
 
   const handleMouseEnter = (id) => {
     setActiveItemId(id);

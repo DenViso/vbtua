@@ -67,6 +67,7 @@ export const Product = () => {
                   <img src={productItem.image} alt={productItem.header} />
                 ) : (
                   error
+                  // add page error
                 )}
               </div>
               <div className="sub-section-2">
