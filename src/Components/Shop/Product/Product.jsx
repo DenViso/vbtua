@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Product.css";
 import { shopData } from "../../../data/shopData.js";
-import { error } from "jquery";
+import { Error} from "../../Error/Error.jsx";
 import { One } from "./One.jsx";
 import { Two } from "./Two.jsx";
 import { Three } from "./Three.jsx";
@@ -66,8 +66,7 @@ export const Product = () => {
                 {productItem.image ? (
                   <img src={productItem.image} alt={productItem.header} />
                 ) : (
-                  error
-                  // add page error
+                  <Error />
                 )}
               </div>
               <div className="sub-section-2">

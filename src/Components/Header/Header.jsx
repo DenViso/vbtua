@@ -29,7 +29,7 @@ export const Header = () => {
       </div>
       <div className="contact-header">
         <img src="/public/img/header/icon/find.svg" alt="" />
-        <img src="/public/img/header/icon/cart.svg" alt="" />
+        <Link to='/cart'><img src="/public/img/header/icon/cart.svg" alt="" /></Link>
         <Link to="/login"><img src="/public/img/header/icon/IogoIcon.svg" alt="" /></Link>
       </div>
     </div>
