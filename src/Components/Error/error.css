@@ -5,9 +5,18 @@
   justify-content: center;
   width: 80%;
   height: 100%;
-  gap: 0.5rem;
   margin: 5rem;
   padding: 10rem;
+}
+.error>h1 {
+  color: var(--Light-Colors-Black---Light, #000);
+text-transform: uppercase;
+  /* 33px - Heading 1 */
+  font-family: DM Sans;
+  font-size: 33px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 43px; /* 130.303% */
 }
 .error > p {
   color: #707070;
@@ -19,6 +28,7 @@
   line-height: 26px; 
   width: 300px;
   text-align: center;
+  margin-top: 1rem;
 }
 .error > a {
   border-radius: 4px;
@@ -31,5 +41,5 @@
   font-weight: 700;
   line-height: normal;
   padding: 1rem 3rem;
-  margin-bottom: 3.5rem;
+  margin: 4rem;
 }

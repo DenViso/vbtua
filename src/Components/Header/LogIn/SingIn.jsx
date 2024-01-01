@@ -48,6 +48,7 @@ export const SingIn = () => {
         </div>
       </div>
       <button>SIGN IN</button>
+      <Link to= "/account">SIGN IN</Link>
       <div className="login-forgot">
         {" "}
         <Link to="/forgot">

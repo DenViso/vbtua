@@ -1,0 +1,35 @@
+.account{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 1rem;
+  border-top: 1px solid #D8D8D8;
+}
+.account>h1{
+  color: var(--Light-Colors-Black---Light, #000);
+
+/* 33px - Heading 1 */
+font-family: DM Sans;
+font-size: 33px;
+font-style: normal;
+font-weight: 500;
+line-height: 43px; /* 130.303% */ 
+}
+.account-link{
+  display: flex;
+  width: 100%;
+  gap: 1.5rem;
+  border-bottom: 1px solid #D8D8D8;
+  padding-bottom: .7rem;
+}
+.comonent-navication-render{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 400px;
+}
