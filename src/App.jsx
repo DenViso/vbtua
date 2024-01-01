@@ -15,7 +15,8 @@ import { Privacy } from "./Components/Footer/Privacy";
 import { BlogItem } from "./Components/Blog/BlogItem";
 import { OurStory } from "./Components/OurStory/OurStory";
 import { Error } from "./Components/Error/Error";
-import{Account} from "./Components/Header/Account/Account"
+import { Cart } from "./Components/Shop/Cart/Cart";
+import { MyAccount } from "./Components/MyAccount/MyAccount";
 function App() {
   return (
     <div className="container">
@@ -34,7 +35,8 @@ function App() {
         <Route path="/blog/:id" element={<BlogItem />} />
         <Route path="/our-story" element={<OurStory />} />
         <Route path="/error" element={<Error />} />
-        <Route path="/account/*" element={<Account />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/my-account/" element={<MyAccount />} />
 
 
 

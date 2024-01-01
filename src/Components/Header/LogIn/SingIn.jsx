@@ -1,20 +1,32 @@
-import React, { useState } from "react";
+import React, { useState,useHistory } from "react";
 import { Link } from "react-router-dom";
 
 export const SingIn = () => {
   const [activePass, setActivePass] = useState(false);
   const [activePass2, setActivePass2] = useState(false);
-  const [activeAgree, setActiveAgree] = useState(false);
+  // const [activeAgree, setActiveAgree] = useState(false);
   const handleActiveRadio = (id) => {
     if (id === 1) {
       setActivePass((prev) => !prev);
     } else if (id === 2) {
       setActivePass2((prev) => !prev);
-    } else if (id === 3) {
-      setActiveAgree((prev) => !prev);
-      <Link to="/login"></Link>;
-    }
+    } 
+    // else if (id === 3) {
+    //   setActiveAgree((prev) => !prev);
+    //   <Link to="/login"></Link>;
+    // }
   };
+
+  const linkToAccount = () => {
+  // const history = useHistory();
+  // history.push('/my-account/');
+    return <Link to="/my-account/"></Link>;
+  }
+
+const handleAccount = () => {
+  linkToAccount();
+  console.log(linkToAccount());
+}
   return (
     <div className="form-log">
       <div className="login-form">
@@ -47,8 +59,14 @@ export const SingIn = () => {
           <p>Remember me</p>
         </div>
       </div>
+<<<<<<< HEAD
       <button>SIGN IN</button>
       <Link to= "/account">SIGN IN</Link>
+=======
+      {/* <button onClick={handleAccount}>SIGN IN</button> */}
+      <Link to="/my-account/">SIGN IN</Link>
+
+>>>>>>> a196665ce73eb024ee1069acf969a08614650b64
       <div className="login-forgot">
         {" "}
         <Link to="/forgot">

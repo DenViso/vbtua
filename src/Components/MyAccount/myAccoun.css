@@ -1,0 +1,72 @@
+.my-account{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  border-top: 1px solid #D8D8D8;
+  width: 100%;
+  
+}
+.my-account>h1{
+ margin: 5rem 0rem;
+ color: var(--Light-Colors-Black---Light, #000);
+ font-family: DM Sans;
+ font-size: 33px;
+ font-style: normal;
+ font-weight: 500;
+ line-height: 43px; /
+}
+
+
+
+.links-account-menu{
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #D8D8D8;
+ 
+}
+.links-account-menu>ul{
+  display: flex;
+  text-align: center;
+  gap: 2rem;
+  
+}
+.account-link{
+ 
+ cursor: pointer;
+ color: var(--Light-Colors-Dark-gray---Light, #707070);
+ padding: 2rem 0rem;
+ font-family: DM Sans;
+ font-size: 20px;
+ font-style: normal;
+ font-weight: 400;
+ line-height: 26px; 
+}
+.active-link{
+  color: rgb(1, 1, 1);
+  border-bottom: 1px solid rgb(2, 2, 2);
+}
+
+/* Dashboard */
+
+.dashboard{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  margin: 5rem 0rem;
+}
+.dashboard>h3{
+  color: #000;
+
+  /* 16px - Heading 5 */
+  font-family: DM Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px; /* 168.75% */
+  }
+.dashboard>h3>a{
+color: #707070;
+}
+
