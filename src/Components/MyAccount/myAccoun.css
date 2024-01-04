@@ -46,6 +46,12 @@
   color: rgb(1, 1, 1);
   border-bottom: 1px solid rgb(2, 2, 2);
 }
+.account-render{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
 
 /* Dashboard */
 
@@ -54,7 +60,7 @@
   flex-direction: column;
   width: 100%;
   gap: 1rem;
-  margin: 5rem 0rem;
+  margin: 2rem 0rem 15rem;
 }
 .dashboard>h3{
   color: #000;
@@ -67,6 +73,192 @@
   line-height: 27px; /* 168.75% */
   }
 .dashboard>h3>a{
-color: #707070;
+  color: var(--Light-Colors-Accent---Light, #A18A68);
 }
 
+/* ORDERS */
+.orders{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  margin: 2rem 0rem 15rem;
+}
+.orders-mesage{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #EFEFEF;
+  border-top: 1px solid #A18A68;
+}
+.orders-mesage>p{
+  color: var(--Light-Colors-Black---Light, #000);
+
+/* 16px - Heading 5 */
+font-family: DM Sans;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 27px; /* 168.75% */
+}
+.orders-mesage>a{
+  color: var(--Light-Colors-Accent---Light, #A18A68);
+
+  /* 16px - Body large */
+  font-family: DM Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+/* ACCOUNT DETAILS */
+
+.account{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto ;
+}
+.account>input{
+  color: var(--Light-Colors-Dark-gray---Light, #707070);
+
+/* 14px - Body Medium */
+font-family: DM Sans;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 22px; /* 157.143% */
+}
+.account>label{
+  color: var(--Light-Colors-Dark-gray---Light, #707070);
+  font-family: DM Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: start;
+  width: 100%;
+}
+.account>h2{
+  text-align: start;
+  width: 100%;
+  margin-top: 3rem;
+}
+.account>button{
+  border-radius: 4px;
+  margin: 3rem 0rem 7rem;
+  border: 1px solid var(--Light-Colors-White---Light, #FFF);
+  background: var(--Light-Colors-Black---Light, #000);
+  color: var(--Light-Colors-White---Light, #FFF);
+  width: 100%;
+  padding: 0.5rem;
+  font-family: DM Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+/* ADDRESS */
+
+.addresses{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content:space-between ;
+  margin: 2rem auto ;
+}
+.billing{
+display: flex;
+flex-direction: column;
+width:45%;
+gap: 1rem;
+
+}
+.billing>h2{
+  color: var(--Light-Colors-Black---Light, #000);
+
+/* 20px - Heading 3 */
+font-family: DM Sans;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 26px; /* 130% */
+}
+.billing>input{
+  color: var(--Light-Colors-Dark-gray---Light, #707070);
+
+/* 16px - Heading 5 */
+font-family: DM Sans;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 27px; /* 168.75% */
+}
+input:focus{
+outline: none;
+}
+.billing>button{
+  border-radius: 4px;
+border: 1px solid var(--Light-Colors-Black---Light, #000);
+background: var(--Light-Colors-Black---Light, #000);
+color: var(--Light-Colors-White---Light, #FFF);
+width: 40%;
+margin: 3rem 0 7rem;
+padding:0.5rem 1.5rem;
+font-family: DM Sans;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+cursor: pointer;
+}
+.billing-input-name{
+  display: flex;
+  gap: 2rem;
+}
+.billing>select{
+  width: 100%;
+  border: 1px solid var(--Light-Colors-Black---Light, #000);
+  padding: 1.3rem 0;
+  border: none;
+  border-bottom: 1px solid #D8D8D8;
+  color: var(--Light-Colors-Dark-gray---Light, #707070);
+  font-family: DM Sans;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 27px; /* 168.75% */
+}
+
+select:focus {
+  outline: none;
+}
+.billing>p{
+  color: var(--Light-Colors-Dark-gray---Light, #707070);
+
+/* 14px - Body Medium */
+font-family: DM Sans;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 22px; /* 157.143% */
+}
+.billing>a{
+  color: var(--Light-Colors-Accent---Light, #A18A68);
+
+  /* 16px - Body large */
+  font-family: DM Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}

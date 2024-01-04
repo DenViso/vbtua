@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Product.css";
 import { shopData } from "../../../data/shopData.js";
-import { Error} from "../../Error/Error.jsx";
+import { Error } from "../../Error/Error.jsx";
 import { One } from "./One.jsx";
 import { Two } from "./Two.jsx";
 import { Three } from "./Three.jsx";
@@ -9,11 +9,11 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 export const Product = () => {
   const { id } = useParams();
-
+  const data = JSON.parse(localStorage.getItem("count", "product"));
   const [slide, setSlide] = useState(1);
   const [addToCard, setAddToCard] = useState(false);
   const [prodInfo, setProdInfo] = useState(<One />);
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(data ? data : 1);
   const newShopData = (shopData, count = 3) => {
     return shopData.slice(0, count);
   };
@@ -32,21 +32,21 @@ export const Product = () => {
   };
   const hendleAddToCard = () => {
     setAddToCard(true);
+    localStorage.setItem("count", count);
+    localStorage.setItem("product", JSON.stringify(productItem));
     setTimeout(() => setAddToCard(false), 5000);
   };
   const increase = () => {
-    setCount(count + 1);
-    // hendleAddToCard();
+    setCount(Number(count) + 1);
+    hendleAddToCard();
   };
   const decrease = () => {
     setCount(count - 1);
-    // hendleAddToCard();
     if (count <= 1) {
       setCount(1);
     }
   };
 
-  
   return (
     <div className="product">
       {addToCard ? (
@@ -90,7 +90,9 @@ export const Product = () => {
                       <span>{count}</span>
                       <span onClick={decrease}>-</span>
                     </div>
-                    <button onClick={hendleAddToCard}>ADD TO CART</button>
+                    <Link to="/cart" onClick={hendleAddToCard}>
+                      ADD TO CART
+                    </Link>
                   </div>
                   <div className="content-link">
                     <a href="">
@@ -156,13 +158,11 @@ export const Product = () => {
           <div className="similar-items">
             {filteredProducts.map((item) => (
               <div key={item.id} className="shopItem">
-              
                 <div className="img-cont">
                   <img src={item.image} alt={item.header} />
                 </div>
                 <h3 className="data-header">{item.header}</h3>
                 <p className="data-text">${item.price}</p>
-               
               </div>
             ))}
           </div>

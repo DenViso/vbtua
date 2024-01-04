@@ -59,14 +59,9 @@ const handleAccount = () => {
           <p>Remember me</p>
         </div>
       </div>
-<<<<<<< HEAD
-      <button>SIGN IN</button>
-      <Link to= "/account">SIGN IN</Link>
-=======
       {/* <button onClick={handleAccount}>SIGN IN</button> */}
       <Link to="/my-account/">SIGN IN</Link>
 
->>>>>>> a196665ce73eb024ee1069acf969a08614650b64
       <div className="login-forgot">
         {" "}
         <Link to="/forgot">

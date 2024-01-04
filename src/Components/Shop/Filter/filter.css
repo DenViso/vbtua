@@ -164,10 +164,11 @@
 .but-Sale > button {
   width: 35px;
   height: 20px;
-  background-color: #707070;
+  
+  background-color: #70707073;
   border: none;
   border-radius: 12px;
-  color: #fff;
+  /* color: #fff; */
   font-size: 10px;
   font-weight: 400;
   position: relative;
@@ -180,7 +181,7 @@
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: #444444;
   animation: transform1 1s 1;
 }
 .active {
