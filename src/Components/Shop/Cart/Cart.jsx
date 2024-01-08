@@ -23,7 +23,7 @@ export const Cart = () => {
   const closedWindow = () => {
     localStorage.removeItem("count");
     localStorage.removeItem("product");
-    newProduct = null;
+    newProduct === null;
   }
   console.log(newCount);
   console.log(newProduct);
